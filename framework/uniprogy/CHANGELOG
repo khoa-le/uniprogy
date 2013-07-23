@@ -1,0 +1,100 @@
+UniProgy Framework Change Log
+=============================
+
+Version 1.1.6 February 10, 2011
+-------------------------------
+- Bug: CFile extension multiple fixes.
+- Bug: EZip extension wrong php opening tag.
+- Bug: Mobile_Detect extension should verify if $_SERVER['HTTP_USER_AGENT'] and $_SERVER['HTTP_ACCEPT'] are set before using them.
+- Bug: globals.php utime should use default timezone if user timezone can't be found.
+- Bug: UDateTimePicker shows calendar in Chinese for any language other then English.
+- Bug: UFormModel automatic behaviors apply doesn't work.
+- Chg: globals.php url function should accept $schema parameter.
+- Chg: UListBehavior can now surround normal list view (not grid) with a form.
+- Chg: UMailer changes app language to recipient language before sending emails.
+- Enh: jquery.uniprogy.js now disables the form after submit until ajax response is received.
+- Enh: UHttpRequest::getUserHostAddress tries to identify user IP using other server variables, not just $_SERVER['REMOTE_ADDR'].
+
+Version 1.1.5 December 21, 2010
+-------------------------------
+- Bug: UMailer should clear all recipients after UMailer::send() - otherwise it sends multiple emails to the same recipient.
+
+Version 1.1.4 December 16, 2010
+-------------------------------
+- Bug: UUserIdentity::init produces an error.
+- Bug: UWorklet:__call "after" methods should be executed in the same order as "before" ones.
+- Bug: when HTML emails are turned off it is still sending HTML code inside.
+- Bug: UHelper::pathToUrl should always return full URL.
+- Bug: UInstallWorklet should empty /assets directory if this is an application upgrader.
+- Bug: if there's missing translation for 'pt_br' (language_region) but there is one for 'pt' (language) - we should use it anyway.
+- Chg: right-to-left optimizations in UForm and UFormElement deprecated since dir="rtl" does this automatically.
+- Chg: CKEditor files updated to the latest version.
+- Enh: UMailer::send allows empty template - in this case script will try to extract body and subject from $params.
+- Enh: UMailer::prepare introduced - allows to create and retrieve email subject and body without actually sending it.
+- Enh: UListWorklet optimized for right-to-left websites.
+- Enh: UListWorklet::taskConfig initializes the form worklet (if worklet ID is provided instead of form settings array).
+- Enh: UActiveRecord::translate introduced - tries to find a translation for a certain attribute.
+- Enh: UTextFormatter::utf8substr introduced - allows to "substring" utf-8 encoded strings.
+- Enh: UHttpRequest::getIsMobile introduced - checks whether request has been sent from a mobile browser.
+- Enh: UTheme::customPath introduced - allows to modify default theme view path.
+
+Version 1.1.3 November 9, 2010
+------------------------------
+- Bug: UMailer::controller doesn't create correct controller
+- Chg: email syntax verification disabled in phpmailer (deligated to the main script)
+- Chg: UUploadify widget now updates bin field value everytime file gets uploaded in scriptData
+- Chg: UFormWorklet::taskModel looks for UFormWorklet::primaryKey in request variables, not just "id"
+- Enh: UUploadWorklet::fileLabel added
+- Enh: UStorageBin::getFiles added
+            
+Version 1.1.2 October 26, 2010
+------------------------------
+- Bug: theme based CSS file for worklets are not being pushed through.
+- Bug: when calling one UWorklet task during the execution of another behaviors do not get reset.
+- Bug: when current worklet needs to be changed in UWorkletManager during the execution of current worklet it doesn't change.
+- Bug: UTimestamp::arrayToTimestamp no longer uses strtotime because of international formats conflict.
+- Bug: UForm has got submit function that submits it automatically.
+- Bug: annoying HTTP error when trying to upload an image using Mac.
+- Chg: worklets, filters, behaviors creation moved to UFactory
+- Chg: UActiveRecord and UFormModel now use UModelConstructor to attach behaviors.
+- Chg: UStorageBin can now return itself if UStorage::bin $id parameter is an instance of UStorageBin.
+- Chg: UFormWorklet has got taskRenderBegin and taskRenderEnd methods.
+- Chg: UListWorklet uses UFormWorklet::taskRenderBegin and UFormWorklet::taskRenderEnd to render a form that surrounds the grid view.
+- Chg: UWebApplication::getId no longer depends on the application name.
+- Enh: admin can now modify almost every email setting.
+
+Version 1.1.1 October 12, 2010
+------------------------------
+- Chg: UListWorklet can now render list views (CListView) along with grid views (CGridView).
+                   
+Version 1.1.0 October 1, 2010
+-----------------------------
+- Bug: script looks for a worklet template in theme view path / worklets before module view path / worklets.
+- Bug: UClientScript keeps injecting those CSS and JS files which are already registered in a session into AJAX replies after script remapping.
+- Chg: complete re-write of UInstallWorklet and associated code in UWebModule and UWebApplication.
+- Chg: UWorkletManager::getModuleWithParents and UWorkletManager::getModuleAlias moved to UWebApplication.
+- Chg: UHelper::saveConfig now unsets items which value is NULL before saving configuration into a file.
+- Enh: any 'after' worklet method now can overwrite the whole task result.
+- Enh: initial worklet (and any behavior attached to it) can now define url manager rules and some custom controller creation terms.
+- Enh: UMailer now can check module view path before rendering email view and layout.
+                   
+Version 1.0.2 September 16, 2010
+--------------------------------
+- Bug: time zone offset calculation. Affected: UDateFormatter, ULocale, UTimestamp, globals.php (utime function).
+
+Version 1.0.1 September 9, 2010
+-------------------------------
+- Bug: Wrong import alias in CImageComponent.
+- Bug: Trailing ',' removed from jquery.uniprogy.js on line 18. Used to cause IE7 incompatibility.
+- Bug: BLocationForm and jquery.uniprogy.loc.js: didn't render the form if non-existent location was currently selected.
+- Bug: WUserResend, WUserReset, WUserReset - mail send method expects to receive recipient info as a model rather then just an email address string.
+- Chg: ULocale::getCountries deprecated.
+- Chg: UUploadWorklet::primaryKey deprecated.
+- Chg: typo in UInstallWorklet
+- Chg: UUploadify::action and UUploadify::formId deprecated.
+- Chg: CArray moved out of framework folder to extensions.
+- Chg: Whole framework is now properly commented out.
+
+Version 1.0.0 August 9, 2010
+----------------------------
+- Initial Release

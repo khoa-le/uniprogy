@@ -1,0 +1,153 @@
+/* typography */
+p + p { text-indent:0; margin-top:0; }
+tr.even td {background: inherit;}
+.loading {background:url(loading.gif) no-repeat right top;}
+h4 {font-weight: bold; color: #999; margin-top:1.25em; border-bottom: 1px solid #ddd; padding-bottom: 0.5em}
+blockquote .signature {font-style:normal;}
+
+/* forms */
+form .description {margin: 1em 0;}
+form .editableImage {float: left; position: relative; max-width:390px}
+form .editableImage .controls {position:absolute;top:3px;right:3px;z-index:100}
+form .editableImage .controls a {background-color: #fff; color: #000; padding: 2px}
+form img{max-width: 390px;margin-bottom: 0.5em;}
+form .errorSummary {padding:.8em;margin-bottom:1em;border:2px solid #ddd;background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+form .errorSummary a {color:#8a1f11;}
+form .row {margin: 0 0 .5em 0; overflow: hidden; zoom: 1;}
+input,select,textarea{font-family:"Microsoft Sans Serif", sans-serif; font-size: 110%}
+textarea {margin: 0;}
+input[type=text], input[type=password], input.text, input.title, select {margin:0 .3em 0 0;}
+input[type=checkbox], input[type=radio], input.checkbox, input.radio { position: static; margin:0.2em 0 0 0; padding: 0; }
+input[type=text].short, input[type=password].short, input.text.short, input.title.short, select.short {width: 50px;}
+input[type=text].medium, input[type=password].medium, input.text.medium, input.title.medium, select.medium {width: 100px;}
+input[type=text].large, input[type=password].large, input.text.large, input.title.large, select.large {width: 400px;}
+label {
+	display: block;
+	font-weight: normal;
+	text-align: right;
+	width: 30%;
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+fieldset {
+	margin: 0 0 0 30%;
+	padding: 0 0 0 0.5em;
+	border: 0;
+}
+label + fieldset {
+	margin: 0;
+	padding: 0;
+}
+fieldset input {
+	float: left;
+}
+fieldset label {
+	float: none;
+	width: auto;
+	text-align: left;
+	display: block;
+	margin: 0 0 .5em 1.6em;
+}
+fieldset br {
+	display: none;
+}
+form hr {
+	margin: 0 0 0.5em;
+}
+form .hint {
+	margin: .5em 0 0 30%;
+	padding-left: 0.5em;
+	color: #999;
+}
+form .hintInlineBefore .hint
+{
+	margin: 0 0.5em 0 -0.5em;
+	float: left;
+}
+form .hintInlineAfter .hint
+{
+	margin: 0 0 0 -0.5em;
+	display: inline;
+}
+form .buttons {
+	margin: 0 0 0.5em 30%;
+	padding-left: 0.5em;
+}
+fieldset.inline label {
+	float: left;
+	margin: 0 0.5em 0.5em 0.5em;
+}
+fieldset.captcha label {
+	margin: 0;
+}
+fieldset.captcha img {
+	border: 1px solid #bbb;
+}
+fieldset.captcha a {
+	display: block;
+}
+fieldset.captcha input {
+	float: none;
+	margin: 0.5em 0;
+}
+.autoWidth{
+	width: auto;
+}
+ul.error {
+	list-style-type: none;
+	display: none;
+}
+
+/* grid */
+hr {
+	height: 1px;
+}
+
+/* main menu */
+#mainmenu ul li {	
+	border: 1px solid #ccc;
+	background-color: #f7f7f7;
+	padding: 0.5em;
+}
+#mainmenu ul li a {
+	text-decoration: none;
+}
+#mainmenu .column {margin: 0;}
+
+/* footer menu */
+#footermenu {float: right;}
+#footermenu ul li {margin: 0 0 0 2em;}
+
+/* misc */
+td.button-column {white-space:nowrap;}
+.txt-center {
+	text-align: center;
+}
+.txt-left {
+	text-align: left;
+}
+.txt-right {
+	text-align: right;
+}
+ul.horizontal {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul.horizontal li {
+	float: left;
+	padding: 0;
+	margin: 0 5px 0 0;
+}
+
+/* worklets */
+.worklet {
+	margin: 0 0 1em 0;
+}
+.worklet .worklet {
+	margin: 1em 0 1em 0;
+}
+.worklet-title {
+}
+.worklet-content {
+}
